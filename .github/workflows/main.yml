@@ -13,6 +13,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20.x'
-      - run: cd getleman-gear-main
-      - run: npm ci
-      - run: npm test
+          
+      - run: cd getleman-gear-main/ && npm ci
+      - run: cd getleman-gear-main/ && npm test
