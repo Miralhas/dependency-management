@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   frontend-tests:
-
+    name: Frontend Tests
     runs-on: ubuntu-latest
 
     steps:
@@ -18,8 +18,8 @@ jobs:
       - run: cd getleman-gear-main/ && npm test
 
   backend-tests:
-    
-    -runs-on: ubuntu-latest
+    name: Backend Tests
+    runs-on: ubuntu-latest
 
     -steps:
       - uses: actions/checkout@v4
@@ -27,4 +27,5 @@ jobs:
         with:
           java-version: '21'
           distribution: 'temurin'
+          
       - run: cd gentleman-back && ./mvnw test -f pom.xml 
