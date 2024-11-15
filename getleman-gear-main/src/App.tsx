@@ -11,9 +11,13 @@ function App() {
 
   useEffect(() => {
     const fetchMinBidValue = async () => {
-      const response = await axios.get<{value: number}>("http://localhost:8080/api/value");
-      const minBidValue = response.data;
-      setMinBid(minBidValue.value);
+      try {
+        const response = await axios.get<{value: number}>("http://localhost:8080/api/value");
+        const minBidValue = response.data;
+        setMinBid(minBidValue.value);
+      } catch (err) {
+        // console.log(err);
+      }
     }
 
     fetchMinBidValue();
