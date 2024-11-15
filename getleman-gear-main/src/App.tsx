@@ -16,7 +16,6 @@ function App() {
         const minBidValue = response.data;
         setMinBid(minBidValue.value);
       } catch (err) {
-        // console.log(err);
       }
     }
 
