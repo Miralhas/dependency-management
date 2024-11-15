@@ -1,0 +1,152 @@
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+section {
+  display: flex;
+  color: white;
+  height: 90vh;
+  padding: 1%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  width: 100%;
+}
+
+h2 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+h2 span {
+  color: rgb(245, 178, 85);
+}
+
+.description {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #ccc;
+  max-width: 80%;
+}
+
+.bar {
+  width: 50px;
+  height: 5px;
+  background-color: rgb(245, 178, 85);
+  margin-top: 10px;
+}
+
+.img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.img img {
+  margin-top: 10%;
+  max-width: 100%;
+  width: 50%;
+  height: auto;
+}
+
+.bidLabel {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.bidInput {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  outline: none;
+}
+
+.bidButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: rgb(245, 178, 85);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-radius: 4px;
+}
+
+.bidButton:hover {
+  background-color: rgb(220, 150, 50);
+}
+
+.errorMessage {
+  margin-top: 10px;
+  color: red;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.successMessage {
+  margin-top: 10px;
+  color: green;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.grid {
+  display: grid;
+}
+
+.loading {
+  margin: auto;
+  width: 75px;
+  height: 75px;
+  background: linear-gradient(#212121, #212121) padding-box,
+    linear-gradient(90deg, rgb(220, 150, 50), darkorchid) border-box;
+  border-radius: 50em;
+  border: 4px solid transparent;
+}
+
+.animateSpin {
+  animation: spin 1s linear infinite;
+}
+
+
+@media (max-width: 765px) {
+  .section {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 90vh;
+    padding: 1%;
+  }
+
+  .img {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    height: auto;
+    margin-top: 25px;
+  }
+
+  .img img {
+    margin: 0;
+  }
+
+  .form {
+    padding: 0 25px;
+  }
+}
